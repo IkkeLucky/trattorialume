@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trattoria Lume</title>
+<meta name="description" content="Trattoria Lume, Firenze Oltrarno dal 1962. Prenota il tuo tavolo online 24 ore su 24: scegli giorno, sala e tavolo, conferma con caparra via SMS.">
+<meta name="theme-color" content="#120d0a">
+<link rel="preload" href="assets/fonts/bodoni-moda-latin-standard-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/hero-tavola.webp" as="image">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Accensione: la candela che apre la serata -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__candela">
+    <span class="fiamma"></span>
+    <span class="stoppino"></span>
+    <span class="cera"></span>
+  </div>
+  <p class="loader__parola">Lume</p>
+</div>
+
+<div class="grana" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#top" aria-label="Trattoria Lume, torna su">
+    <span class="nav__logo-t">Trattoria</span>
+    <span class="nav__logo-l">Lume</span>
+  </a>
+  <nav class="nav__links" aria-label="Sezioni">
+    <a href="#storia">La storia</a>
+    <a href="#menu">La carta</a>
+    <a href="#sala">Le sale</a>
+    <a href="#ristoratore">Dietro le quinte</a>
+  </nav>
+  <a class="btn btn--candela nav__cta" href="#prenota">Prenota un tavolo</a>
+  <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="menuMobile" aria-label="Apri il menu">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="menu-mobile" id="menuMobile" hidden>
+  <a href="#storia">La storia</a>
+  <a href="#menu">La carta</a>
+  <a href="#sala">Le sale</a>
+  <a href="#prenota">Prenota</a>
+  <a href="#ristoratore">Dietro le quinte</a>
+  <p class="menu-mobile__info">Via dei Serragli 41r, Firenze<br>Mar–Dom · 12:30–14:30 · 19:30–23:00</p>
+</div>
+
+<main id="top">
+
+  <!-- HERO: la tavola si accende sotto la luce della candela -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <img class="hero__img" src="assets/img/hero-tavola.webp" alt="Tavola di legno vista dall'alto con piatti di risotto, zuppa e salse condivisi tra commensali" fetchpriority="high">
+    </div>
+    <div class="hero__buio" id="heroBuio" aria-hidden="true"></div>
+
+    <div class="hero__inner wrap">
+      <p class="eyebrow hero__eyebrow">Firenze · Oltrarno · dal 1962</p>
+      <h1 class="hero__titolo" data-split>
+        <span class="riga">Una tavola</span>
+        <span class="riga"><em>accesa,</em> ogni</span>
+        <span class="riga">sera.</span>
+      </h1>
+      <div class="hero__fondo">
+        <p class="hero__testo">Cucina toscana di mercato, quarantotto coperti e un forno a legna acceso dalle cinque. Prenota in trenta secondi, a qualsiasi ora: niente attese al telefono.</p>
+        <div class="hero__azioni">
+          <a class="btn btn--candela" href="#prenota">Prenota un tavolo</a>
+          <a class="btn btn--linea" href="#menu">Sfoglia la carta</a>
+        </div>
+      </div>
+      <p class="stato-sera" id="statoSera"><span class="stato-sera__punto"></span><span id="statoSeraTesto">Stasera: 5 tavoli liberi dalle 21:00</span></p>
+    </div>
+    <a class="hero__scorri" href="#lavagna" aria-label="Scorri alla sezione successiva"><span></span></a>
+  </section>
+
+  <!-- LAVAGNA scorrevole: i piatti come scritti col gesso -->
+  <section class="lavagna" id="lavagna" aria-label="Piatti della settimana">
+    <div class="lavagna__riga lavagna__riga--grande" data-marquee="1">
+      <div class="lavagna__traccia">
+        <span>Pappardelle al cinghiale</span><i>·</i><span>Sarde in saor</span><i>·</i><span>Pici cacio e pepe</span><i>·</i><span>Tagliata alla brace</span><i>·</i><span>Ribollita</span><i>·</i><span>Torta caprese</span><i>·</i>
+      </div>
+    </div>
+    <div class="lavagna__riga lavagna__riga--tovaglia" data-marquee="-1">
+      <div class="lavagna__traccia">
+        <span>Olio nuovo di Montespertoli</span><i>/</i><span>Pane cotto a legna</span><i>/</i><span>Vino della casa · Chianti Rùfina</span><i>/</i><span>Pasta tirata a mano ogni mattina</span><i>/</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIA -->
+  <section class="storia wrap" id="storia">
+    <div class="storia__testo">
+      <p class="eyebrow">La storia</p>
+      <h2 class="titolo-sezione" data-split>
+        <span class="riga">Sessantaquattro anni</span>
+        <span class="riga">di <em>ragù</em> la domenica.</span>
+      </h2>
+      <p class="corpo">Nonno Aurelio aprì nel 1962 con sei tavoli e una lavagna. Oggi in cucina c'è sua nipote Marta, ma la regola è la stessa: si cucina quello che c'è al mercato, e il ragù cuoce sei ore.</p>
+      <p class="corpo">Abbiamo tolto una sola cosa: il telefono che squillava durante il servizio. Ora le prenotazioni arrivano online, giorno e notte, e noi restiamo ai fornelli.</p>
+      <dl class="numeri">
+        <div><dt><span data-conta="48">48</span></dt><dd>coperti, in quattro sale</dd></div>
+        <div><dt><span data-conta="6">6</span> ore</dt><dd>di cottura per il ragù</dd></div>
+        <div><dt><span data-conta="1962">1962</span></dt><dd>il primo servizio</dd></div>
+      </dl>
+    </div>
+    <div class="storia__foto">
+      <figure class="foto foto--seppia" data-velocita="-0.12">
+        <img src="assets/img/storia-1962.webp" alt="Fotografia in bianco e nero di un signore in cappello che cammina per strada tra la folla" loading="lazy">
+        <figcaption class="a-mano">Nonno Aurelio, via dei Serragli, 1962</figcaption>
+      </figure>
+      <figure class="foto foto--piccola" data-velocita="0.18">
+        <img src="assets/img/chef.webp" alt="La chef in camicia bianca impiatta una portata con le mani" loading="lazy">
+        <figcaption class="a-mano">Marta, oggi</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- LA CARTA: piatti che girano come serviti in tavola -->
+  <section class="carta" id="menu">
+    <div class="carta__testa wrap">
+      <p class="eyebrow">La carta d'autunno</p>
+      <h2 class="titolo-sezione" data-split>
+        <span class="riga">Si cambia con</span>
+        <span class="riga">la <em>stagione.</em></span>
+      </h2>
+      <p class="corpo carta__nota">Dieci piatti, scritti a ottobre. Trascina o scorri: arrivano in tavola uno alla volta.</p>
+    </div>
+    <div class="carta__pista" id="cartaPista">
+      <div class="carta__binario" id="cartaBinario">
+        <article class="piatto">
+          <p class="piatto__portata">Antipasto</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-sarde.webp" alt="Sarde in saor su piatto scuro" loading="lazy"></div>
+          <h3 class="piatto__nome">Sarde in saor</h3>
+          <p class="piatto__descr">Cipolla in agrodolce, uvetta e pinoli tostati.</p>
+          <p class="piatto__prezzo">€ 13</p>
+        </article>
+        <article class="piatto">
+          <p class="piatto__portata">Antipasto</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-tagliere.webp" alt="Tagliere di verdure crude con salse" loading="lazy"></div>
+          <h3 class="piatto__nome">Pinzimonio dell'orto</h3>
+          <p class="piatto__descr">Verdure crude del mercato, olio nuovo e crema di ceci.</p>
+          <p class="piatto__prezzo">€ 12</p>
+        </article>
+        <article class="piatto">
+          <p class="piatto__portata">Antipasto</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-uovo.webp" alt="Uova sode tagliate con spinacino su piatto scuro" loading="lazy"></div>
+          <h3 class="piatto__nome">Uovo e spinacino</h3>
+          <p class="piatto__descr">Uovo morbido, spinaci novelli, pane bruciato e acciuga.</p>
+          <p class="piatto__prezzo">€ 11</p>
+        </article>
+        <article class="piatto">
+          <p class="piatto__portata">Primo</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-zuppa.webp" alt="Zuppa di ceci e cavolo nero in una ciotola" loading="lazy"></div>
+          <h3 class="piatto__nome">Ceci e cavolo nero</h3>
+          <p class="piatto__descr">La zuppa della nonna, con crostone e olio a crudo.</p>
+          <p class="piatto__prezzo">€ 12</p>
+        </article>
+        <article class="piatto">
+          <p class="piatto__portata">Secondo</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-gratin.webp" alt="Baccalà gratinato con spinaci in padella di ferro" loading="lazy"></div>
+          <h3 class="piatto__nome">Baccalà in padella</h3>
+          <p class="piatto__descr">Gratinato al forno a legna con spinaci e latte.</p>
+          <p class="piatto__prezzo">€ 22</p>
+        </article>
+        <article class="piatto">
+          <p class="piatto__portata">Secondo</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-tagliata.webp" alt="Tagliata di manzo con verdure su piatto bianco" loading="lazy"></div>
+          <h3 class="piatto__nome">Tagliata alla brace</h3>
+          <p class="piatto__descr">Manzo del Mugello, cicoria ripassata, sale grosso.</p>
+          <p class="piatto__prezzo">€ 26</p>
+        </article>
+        <article class="piatto">
+          <p class="piatto__portata">Contorno</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-carote.webp" alt="Carote arrosto con finocchietto in un piatto fondo" loading="lazy"></div>
+          <h3 class="piatto__nome">Carote al miele</h3>
+          <p class="piatto__descr">Arrosto, miele di castagno e finocchietto selvatico.</p>
+          <p class="piatto__prezzo">€ 9</p>
+        </article>
+        <article class="piatto">
+          <p class="piatto__portata">Secondo</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-tortino.webp" alt="Tortino di patate con uovo in camicia e salsa verde" loading="lazy"></div>
+          <h3 class="piatto__nome">Tortino di patate</h3>
+          <p class="piatto__descr">Uovo in camicia, salsa verde e pecorino di Pienza.</p>
+          <p class="piatto__prezzo">€ 14</p>
+        </article>
+        <article class="piatto">
+          <p class="piatto__portata">Dolce</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-caprese.webp" alt="Tre quadrotti di torta al cioccolato con menta" loading="lazy"></div>
+          <h3 class="piatto__nome">Torta caprese</h3>
+          <p class="piatto__descr">Mandorle, cioccolato fondente e una foglia di menta.</p>
+          <p class="piatto__prezzo">€ 8</p>
+        </article>
+        <article class="piatto">
+          <p class="piatto__portata">Dolce</p>
+          <div class="piatto__tondo"><img src="assets/img/piatto-gelato.webp" alt="Stecchi di gelato al cioccolato con granella di nocciole" loading="lazy"></div>
+          <h3 class="piatto__nome">Stecco nocciola</h3>
+          <p class="piatto__descr">Gelato al cioccolato, nocciole di Giffoni tostate.</p>
+          <p class="piatto__prezzo">€ 7</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="primi wrap">
+      <div class="primi__lista">
+        <h3 class="primi__titolo">Primi tirati a mano</h3>
+        <ul>
+          <li><span>Pappardelle al ragù bianco di cinghiale</span><b></b><span>16</span></li>
+          <li><span>Pici cacio e pepe</span><b></b><span>14</span></li>
+          <li><span>Ravioli di ricotta e limone, burro e salvia</span><b></b><span>15</span></li>
+          <li><span>Tagliolini al tartufo bianco <small>(fino a dicembre)</small></span><b></b><span>34</span></li>
+          <li><span>Risotto alla zucca e amaretto</span><b></b><span>16</span></li>
+        </ul>
+      </div>
+      <aside class="degustazione">
+        <p class="eyebrow">Menu degustazione</p>
+        <p class="degustazione__nome">«Lume»</p>
+        <p class="degustazione__descr">Sette portate decise ogni mattina dalla chef, servite a tutto il tavolo.</p>
+        <p class="degustazione__prezzo"><span>€ 75</span> a persona · abbinamento vini € 40</p>
+        <a class="btn btn--linea" href="#prenota" data-esperienza="degustazione">Prenota la degustazione</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- MERCATO -->
+  <section class="mercato wrap" id="mercato">
+    <div class="mercato__collage">
+      <figure class="foto mercato__a" data-velocita="-0.1"><img src="assets/img/mercato-carote.webp" alt="Cassetta di legno piena di carote al mercato" loading="lazy"></figure>
+      <figure class="foto mercato__b" data-velocita="0.14"><img src="assets/img/carote-viola.webp" alt="Mazzi di carote viola con le foglie" loading="lazy"></figure>
+      <figure class="foto mercato__c" data-velocita="-0.2"><img src="assets/img/mercato-verdure.webp" alt="Porri e verdure a foglia in cassetta" loading="lazy"></figure>
+    </div>
+    <div class="mercato__testo">
+      <p class="eyebrow">Il mercato</p>
+      <h2 class="titolo-sezione" data-split>
+        <span class="riga">Alle 6:30 siamo</span>
+        <span class="riga">già a <em>Sant'Ambrogio.</em></span>
+      </h2>
+      <p class="corpo">La carta la scrive il mercato. Quello che finisce, finisce: per questo la lavagna cambia durante la sera.</p>
+      <div class="lavagnetta" aria-label="Fuori carta di oggi">
+        <p class="lavagnetta__data" id="lavagnaData">Oggi</p>
+        <ul class="a-mano">
+          <li>Porcini trifolati — 14</li>
+          <li>Trippa alla fiorentina — 13</li>
+          <li>Schiacciata con l'uva — 7</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE SALE: lista editoriale con foto che segue il cursore -->
+  <section class="sale" id="sala">
+    <div class="wrap">
+      <p class="eyebrow">Le sale</p>
+      <h2 class="titolo-sezione" data-split>
+        <span class="riga">Quattro stanze,</span>
+        <span class="riga">scegli la <em>tua.</em></span>
+      </h2>
+      <ul class="sale__lista" id="saleLista">
+        <li class="sala" data-img="assets/img/sala-grande.webp" data-area="sala">
+          <span class="sala__n">I</span>
+          <span class="sala__nome">Sala Grande</span>
+          <span class="sala__info">28 coperti · luce bassa, divanetti in velluto</span>
+          <img class="sala__foto-mobile" src="assets/img/sala-grande.webp" alt="Sala con divanetti, cuscini e lampada da tavolo dorata" loading="lazy">
+        </li>
+        <li class="sala" data-img="assets/img/veranda.webp" data-area="nonna">
+          <span class="sala__n">II</span>
+          <span class="sala__nome">La Stanza della Nonna</span>
+          <span class="sala__info">10 coperti · mattoni, finestre verdi, l'orologio a cucù</span>
+          <img class="sala__foto-mobile" src="assets/img/veranda.webp" alt="Stanza con muro di mattoni, finestre verdi e tavolo con tovaglia a quadri" loading="lazy">
+        </li>
+        <li class="sala" data-img="assets/img/chef.webp" data-area="banco">
+          <span class="sala__n">III</span>
+          <span class="sala__nome">Banco dello Chef</span>
+          <span class="sala__info">6 sgabelli · si mangia guardando la cucina</span>
+          <img class="sala__foto-mobile" src="assets/img/chef.webp" alt="La chef impiatta davanti al banco" loading="lazy">
+        </li>
+        <li class="sala" data-img="assets/img/cantina-privata.webp" data-area="cantina">
+          <span class="sala__n">IV</span>
+          <span class="sala__nome">Cantina Privata</span>
+          <span class="sala__info">fino a 16 ospiti · cene di famiglia e di lavoro</span>
+          <img class="sala__foto-mobile" src="assets/img/cantina-privata.webp" alt="Lunga tavola apparecchiata con fiori secchi e candele" loading="lazy">
+        </li>
+      </ul>
+    </div>
+    <div class="sale__seguace" id="saleSeguace" aria-hidden="true"><img alt="" src="assets/img/sala-grande.webp"></div>
+  </section>
+
+  <!-- VINO: il titolo si riempie come un calice -->
+  <section class="vino" id="vino">
+    <div class="vino__media"><img src="assets/img/vino.webp" alt="Un sommelier versa il vino in una fila di calici" loading="lazy"></div>
+    <div class="vino__testo wrap">
+      <h2 class="vino__titolo" id="vinoTitolo">Duecento etichette, quasi tutte <em>toscane.</em></h2>
+      <p class="corpo">Dal Chianti Rùfina della casa alla carta dei Brunello. Chiedi a Lorenzo: conosce a memoria ogni cantina.</p>
+    </div>
+  </section>
+
+  <!-- PRENOTAZIONE: la comanda + il telefono del cliente -->
+  <section class="prenota" id="prenota">
+    <div class="wrap">
+      <div class="prenota__testa">
+        <p class="eyebrow">Prenota</p>
+        <h2 class="titolo-sezione" data-split>
+          <span class="riga">Il tuo tavolo,</span>
+          <span class="riga">in <em>trenta secondi.</em></span>
+        </h2>
+        <p class="corpo">Scegli giorno e tavolo, lascia una piccola caparra via SMS e ricevi i promemoria in automatico. Cancellazione gratuita fino a 24 ore prima.</p>
+      </div>
+
+      <div class="prenota__griglia">
+        <!-- La comanda -->
+        <div class="comanda" id="comanda">
+          <div class="comanda__strappo" aria-hidden="true"></div>
+          <div class="comanda__intestazione">
+            <p class="comanda__marchio">Trattoria Lume</p>
+            <p class="comanda__n">Comanda n° <span id="comandaN">0417</span></p>
+          </div>
+
+          <ol class="passi" id="passi" aria-label="Passaggi della prenotazione">
+            <li class="passo-tab attivo" data-vai="0"><span>Quando</span></li>
+            <li class="passo-tab" data-vai="1"><span>Dove</span></li>
+            <li class="passo-tab" data-vai="2"><span>Esperienza</span></li>
+            <li class="passo-tab" data-vai="3"><span>Chi</span></li>
+            <li class="passo-tab" data-vai="4"><span>Conferma</span></li>
+          </ol>
+          <div class="calice" aria-hidden="true"><div class="calice__vino" id="caliceVino"></div></div>
+
+          <form class="comanda__corpo" id="formPrenota" novalidate>
+            <!-- 1 QUANDO -->
+            <fieldset class="passo attivo" data-passo="0">
+              <legend class="a-mano passo__titolo">Quando venite?</legend>
+              <div class="riga-campo">
+                <span class="etichetta">Coperti</span>
+                <div class="stepper">
+                  <button type="button" class="stepper__btn" id="copertiMeno" aria-label="Un coperto in meno">−</button>
+                  <output id="coperti" aria-live="polite">2</output>
+                  <button type="button" class="stepper__btn" id="copertiPiu" aria-label="Un coperto in più">+</button>
+                </div>
+              </div>
+              <div class="calendario">
+                <div class="calendario__testa">
+                  <button type="button" class="calendario__freccia" id="mesePrima" aria-label="Mese precedente">‹</button>
+                  <p class="calendario__mese" id="meseNome">Ottobre 2026</p>
+                  <button type="button" class="calendario__freccia" id="meseDopo" aria-label="Mese successivo">›</button>
+                </div>
+                <div class="calendario__giorni-sett" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>G</span><span>V</span><span>S</span><span>D</span></div>
+                <div class="calendario__griglia" id="calendario" role="grid" aria-label="Scegli il giorno"></div>
+                <p class="calendario__nota">Lunedì chiuso per riposo.</p>
+              </div>
+              <div class="turni" role="tablist" aria-label="Turno">
+                <button type="button" class="turno" role="tab" data-turno="pranzo" aria-selected="false">Pranzo</button>
+                <button type="button" class="turno attivo" role="tab" data-turno="cena" aria-selected="true">Cena</button>
+              </div>
+              <div class="orari" id="orari" aria-label="Orari disponibili"></div>
+            </fieldset>
+
+            <!-- 2 DOVE -->
+            <fieldset class="passo" data-passo="1">
+              <legend class="a-mano passo__titolo">Dove vi sedete?</legend>
+              <div class="aree" id="aree" role="tablist" aria-label="Sala">
+                <button type="button" class="area attivo" data-area="sala">Sala Grande</button>
+                <button type="button" class="area" data-area="nonna">Stanza della Nonna</button>
+                <button type="button" class="area" data-area="banco">Banco dello Chef</button>
+                <button type="button" class="area" data-area="cantina">Cantina Privata</button>
+              </div>
+              <div class="pianta" id="pianta" aria-label="Pianta della sala"></div>
+              <div class="pianta__legenda">
+                <span><i class="leg leg--libero"></i>libero</span>
+                <span><i class="leg leg--occupato"></i>occupato</span>
+                <span><i class="leg leg--scelto"></i>il vostro</span>
+                <button type="button" class="link" id="sceglieteVoi">Scegliete voi il tavolo</button>
+              </div>
+              <p class="pianta__msg" id="piantaMsg" aria-live="polite"></p>
+            </fieldset>
+
+            <!-- 3 ESPERIENZA -->
+            <fieldset class="passo" data-passo="2">
+              <legend class="a-mano passo__titolo">Cosa mangiate?</legend>
+              <div class="esperienze" id="esperienze">
+                <label class="esperienza">
+                  <input type="radio" name="esperienza" value="carta" checked>
+                  <span class="esperienza__nome">Alla carta</span>
+                  <span class="esperienza__descr">Ordinate al tavolo dalla carta e dalla lavagna.</span>
+                  <span class="esperienza__caparra">caparra € 10 a persona</span>
+                </label>
+                <label class="esperienza">
+                  <input type="radio" name="esperienza" value="degustazione">
+                  <span class="esperienza__nome">Degustazione «Lume»</span>
+                  <span class="esperienza__descr">Sette portate, € 75 a persona. Per tutto il tavolo.</span>
+                  <span class="esperienza__caparra">caparra € 25 a persona</span>
+                </label>
+                <label class="esperienza">
+                  <input type="radio" name="esperienza" value="chef">
+                  <span class="esperienza__nome">Al Banco con la chef</span>
+                  <span class="esperienza__descr">Nove assaggi fuori carta, € 110 a persona. Solo al banco.</span>
+                  <span class="esperienza__caparra">caparra € 40 a persona</span>
+                </label>
+              </div>
+              <div class="occasioni">
+                <span class="etichetta">Un'occasione speciale?</span>
+                <div class="chips" id="occasioni">
+                  <label class="chip"><input type="checkbox" value="Compleanno"><span>Compleanno</span></label>
+                  <label class="chip"><input type="checkbox" value="Anniversario"><span>Anniversario</span></label>
+                  <label class="chip"><input type="checkbox" value="Cena di lavoro"><span>Cena di lavoro</span></label>
+                  <label class="chip"><input type="checkbox" value="Seggiolone"><span>Serve un seggiolone</span></label>
+                </div>
+              </div>
+              <label class="campo">
+                <span class="etichetta">Allergie o intolleranze</span>
+                <input type="text" id="allergie" placeholder="es. celiachia, frutta a guscio" autocomplete="off">
+              </label>
+            </fieldset>
+
+            <!-- 4 CHI -->
+            <fieldset class="passo" data-passo="3">
+              <legend class="a-mano passo__titolo">A che nome?</legend>
+              <div class="campi">
+                <label class="campo">
+                  <span class="etichetta">Nome e cognome</span>
+                  <input type="text" id="nome" autocomplete="name" value="Giulia Ferri" required>
+                  <span class="errore" data-errore-per="nome">Scrivi il nome per il segnaposto.</span>
+                </label>
+                <label class="campo">
+                  <span class="etichetta">Cellulare</span>
+                  <span class="prefisso"><span>+39</span><input type="tel" id="tel" autocomplete="tel-national" inputmode="tel" value="347 123 4567" required></span>
+                  <span class="errore" data-errore-per="tel">Serve un cellulare italiano di 9 o 10 cifre: lì arriva l'SMS per la caparra.</span>
+                </label>
+                <label class="campo campo--largo">
+                  <span class="etichetta">Email <small>(facoltativa)</small></span>
+                  <input type="email" id="email" autocomplete="email" value="giulia.ferri@esempio.it">
+                  <span class="errore" data-errore-per="email">Controlla l'indirizzo email.</span>
+                </label>
+                <label class="campo campo--largo">
+                  <span class="etichetta">Note per la sala</span>
+                  <textarea id="note" rows="2" placeholder="es. arriviamo con un passeggino"></textarea>
+                </label>
+              </div>
+              <label class="spunta"><input type="checkbox" id="consensoSms" checked><span>Mandatemi i promemoria via SMS (24 ore e 3 ore prima).</span></label>
+              <label class="spunta"><input type="checkbox" id="consensoCal" checked><span>Aggiungete la prenotazione al mio Google Calendar.</span></label>
+            </fieldset>
+
+            <!-- 5 CONFERMA -->
+            <fieldset class="passo" data-passo="4">
+              <legend class="a-mano passo__titolo">Ricapitoliamo</legend>
+              <dl class="riepilogo" id="riepilogo"></dl>
+              <div class="caparra-box">
+                <p><strong>Caparra: <span id="caparraTot">€ 20,00</span></strong></p>
+                <p>Ti mandiamo un SMS con il link per pagarla. Viene scalata dal conto e restituita se cancelli entro 24 ore prima.</p>
+              </div>
+            </fieldset>
+
+            <div class="comanda__piede">
+              <button type="button" class="btn btn--testo" id="indietro" hidden>Indietro</button>
+              <p class="comanda__sommario" id="sommario" aria-live="polite"></p>
+              <button type="submit" class="btn btn--vino" id="avanti">Avanti</button>
+            </div>
+          </form>
+
+          <!-- Lo scontrino che esce dopo il pagamento -->
+          <div class="scontrino-area" id="scontrinoArea" hidden>
+            <div class="scontrino" id="scontrino">
+              <p class="scontrino__marchio">TRATTORIA LUME</p>
+              <p class="scontrino__sub">Via dei Serragli 41r · Firenze</p>
+              <div class="scontrino__righe" id="scontrinoRighe"></div>
+              <div class="scontrino__codice" id="scontrinoCodice" aria-hidden="true"></div>
+              <p class="scontrino__grazie">Grazie, a presto!</p>
+            </div>
+            <div class="dopo">
+              <div class="sync" id="sync">
+                <div class="sync__icona"><span id="syncGiorno">18</span><small id="syncMese">OTT</small></div>
+                <div>
+                  <p class="sync__titolo" id="syncTitolo">Google Calendar sincronizzato</p>
+                  <p class="sync__testo" id="syncTesto">L'evento è nel calendario della sala e nel tuo.</p>
+                </div>
+              </div>
+              <ol class="promemoria" id="promemoria"></ol>
+              <div class="dopo__azioni">
+                <a class="btn btn--candela" id="gcalLink" href="#" target="_blank" rel="noopener">Apri in Google Calendar</a>
+                <button type="button" class="btn btn--linea" id="simulaPromemoria">Simula il promemoria di domani</button>
+                <a class="btn btn--testo" href="#ristoratore">Vedi lato ristorante</a>
+                <button type="button" class="btn btn--testo" id="nuovaPrenotazione">Nuova prenotazione</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Il telefono del cliente -->
+        <div class="telefono-colonna">
+          <p class="telefono__didascalia a-mano">Il telefono del cliente</p>
+          <div class="telefono" id="telefono">
+            <div class="telefono__isola"></div>
+            <div class="telefono__schermo">
+              <div class="telefono__barra"><span id="oraTel">20:41</span><span class="telefono__segnali">5G ▮▮▮</span></div>
+
+              <!-- Schermata di blocco -->
+              <div class="schermata schermata--blocco attiva" data-schermata="blocco">
+                <p class="blocco__data" id="bloccoData">martedì 6 ottobre</p>
+                <p class="blocco__ora" id="bloccoOra">20:41</p>
+                <div class="notifiche" id="notifiche">
+                  <p class="notifiche__vuoto" id="notificheVuoto">Qui compare quello che riceve il cliente: SMS, caparra, calendario e promemoria.</p>
+                </div>
+              </div>
+
+              <!-- Messaggi -->
+              <div class="schermata schermata--sms" data-schermata="sms">
+                <div class="sms__testa">
+                  <button type="button" class="sms__indietro" data-apri="blocco" aria-label="Torna alla schermata di blocco">‹</button>
+                  <div class="sms__avatar">L</div>
+                  <p>Trattoria Lume</p>
+                </div>
+                <div class="sms__thread" id="smsThread"></div>
+                <div class="sms__risposte" id="smsRisposte"></div>
+              </div>
+
+              <!-- Pagamento -->
+              <div class="schermata schermata--paga" data-schermata="paga">
+                <div class="paga__url"><i class="paga__lucchetto" aria-hidden="true"></i>lume.to/c/<span id="pagaCodice">7KQ2</span></div>
+                <div class="paga__corpo">
+                  <p class="paga__marchio">Trattoria Lume</p>
+                  <p class="paga__cosa" id="pagaCosa">Caparra · 2 coperti · ven 16 ott, 20:30</p>
+                  <p class="paga__importo" id="pagaImporto">€ 20,00</p>
+                  <div class="metodi" role="radiogroup" aria-label="Metodo di pagamento">
+                    <label class="metodo"><input type="radio" name="metodo" value="carta" checked><span>Carta ···· 4242</span></label>
+                    <label class="metodo"><input type="radio" name="metodo" value="satispay"><span>Satispay</span></label>
+                    <label class="metodo"><input type="radio" name="metodo" value="gpay"><span>Google Pay</span></label>
+                    <label class="metodo"><input type="radio" name="metodo" value="apple"><span>Apple Pay</span></label>
+                  </div>
+                  <button type="button" class="paga__btn" id="pagaBtn">Paga € 20,00</button>
+                  <p class="paga__nota">Pagamento simulato: nessun addebito reale.</p>
+                </div>
+                <div class="paga__esito" id="pagaEsito" hidden>
+                  <div class="paga__spunta"></div>
+                  <p>Caparra ricevuta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="telefono__hint" id="telHint">Completa la comanda: l'SMS arriva qui.</p>
+        </div>
+      </div>
+    </div>
+    <div class="avviso-sms" id="avvisoSms" hidden>
+      <p>Nuovo SMS sul telefono del cliente</p>
+      <button type="button" class="btn btn--candela" id="avvisoVai">Apri</button>
+    </div>
+  </section>
+
+  <!-- DIETRO LE QUINTE: la vista del ristoratore -->
+  <section class="quinte" id="ristoratore">
+    <div class="wrap">
+      <div class="quinte__testa">
+        <p class="eyebrow">Dietro le quinte</p>
+        <h2 class="titolo-sezione" data-split>
+          <span class="riga">Quello che vede</span>
+          <span class="riga">la <em>sala.</em></span>
+        </h2>
+        <p class="corpo">Ogni prenotazione arriva qui, già pagata e già nel Google Calendar del locale. I promemoria partono da soli. Prova: la prenotazione che hai appena fatto compare nell'elenco.</p>
+      </div>
+
+      <div class="cruscotto" id="cruscotto">
+        <div class="cruscotto__barra">
+          <div class="cruscotto__data">
+            <button type="button" class="calendario__freccia" id="cDataPrima" aria-label="Giorno precedente">‹</button>
+            <p id="cDataNome">martedì 6 ottobre</p>
+            <button type="button" class="calendario__freccia" id="cDataDopo" aria-label="Giorno successivo">›</button>
+          </div>
+          <p class="pill pill--ok"><span class="pill__punto"></span>Google Calendar · sincronizzato <span id="syncFa">ora</span></p>
+          <p class="cruscotto__esempio">Dati di esempio</p>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi__item"><p class="kpi__val" id="kCoperti">0</p><p class="kpi__lbl">coperti stasera <span id="kCopertiMax">/ 48</span></p><div class="kpi__barra"><span id="kCopertiBarra"></span></div></div>
+          <div class="kpi__item"><p class="kpi__val" id="kCaparre">€ 0</p><p class="kpi__lbl">caparre incassate oggi</p></div>
+          <div class="kpi__item"><p class="kpi__val">1,8%</p><p class="kpi__lbl">no-show negli ultimi 30 giorni <span class="kpi__prima">era 14% col telefono</span></p></div>
+          <div class="kpi__item"><p class="kpi__val">112</p><p class="kpi__lbl">telefonate evitate questa settimana</p></div>
+        </div>
+
+        <div class="cruscotto__corpo">
+          <div class="elenco">
+            <p class="cruscotto__sotto">Prenotazioni</p>
+            <ul id="elencoPrenotazioni"></ul>
+          </div>
+          <div class="timeline">
+            <p class="cruscotto__sotto">Tavoli · <span id="tlTurno">cena</span></p>
+            <div class="timeline__scorri">
+              <div class="timeline__griglia" id="timeline"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="vantaggi">
+        <li><h3>Zero telefonate in servizio</h3><p>Prenotano da soli, 24 ore su 24. Il 63% delle prenotazioni arriva dopo le 22.</p></li>
+        <li><h3>No-show quasi spariti</h3><p>Una caparra di 10 € via SMS basta: chi paga, viene. E se disdice per tempo, la restituisci con un tocco.</p></li>
+        <li><h3>Tutto nel tuo Google Calendar</h3><p>Ogni tavolo diventa un evento, con coperti, allergie e numero del cliente. Su tutti i telefoni dello staff.</p></li>
+        <li><h3>Promemoria automatici</h3><p>24 ore prima, 3 ore prima e il giorno dopo per la recensione. Il cliente risponde 1 o 2 e il tavolo si aggiorna.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTATTI con l'espresso fumante -->
+  <section class="chiusura" id="contatti">
+    <div class="chiusura__foto">
+      <img src="assets/img/espresso.webp" alt="Un espresso che scende dalla macchina nella tazzina" loading="lazy">
+      <div class="vapore" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <div class="chiusura__testo">
+      <h2 class="titolo-sezione">Il caffè lo offriamo <em>noi.</em></h2>
+      <dl class="info">
+        <div><dt>Dove</dt><dd>Via dei Serragli 41r<br>50124 Firenze</dd></div>
+        <div><dt>Quando</dt><dd>Martedì–domenica<br>12:30–14:30 · 19:30–23:00<br>Lunedì chiuso</dd></div>
+        <div><dt>Contatti</dt><dd><span class="copiabile">055 000 0000</span><br><span class="copiabile">ciao@trattorialume.it</span></dd></div>
+      </dl>
+      <a class="btn btn--candela" href="#prenota">Prenota un tavolo</a>
+    </div>
+  </section>
+</main>
+
+<footer class="piede wrap">
+  <p class="piede__logo">Lume</p>
+  <p>Prototipo dimostrativo: il ristorante è immaginario, nessun dato viene inviato e nessun pagamento è reale.</p>
+  <p>Foto CC0 (pxhere, foodiesfeed, rawpixel, Pexels) dai temi open source di Automattic.</p>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/dati.js"></script>
+<script src="assets/js/effetti.js"></script>
+<script src="assets/js/prenota.js"></script>
+<script src="assets/js/cruscotto.js"></script>
+</body>
+</html>
